@@ -5115,10 +5115,31 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 20px 30px;
     opacity: 0;
 }
+
+.product-item-atas .cart-concern {
+  background: var(--light-color);
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  z-index: 9;
+  transition: 0.5s ease-out;
+  padding: 20px 30px;
+  opacity: 0;
+}
 .product-item:hover .cart-concern {
-    bottom: 250px;
+    bottom: 200px;
     opacity: 1;
 }
+
+.product-item-atas:hover .cart-concern {
+  bottom: 250px;
+  opacity: 1;
+}
+
 i.icon.icon-arrow-io {
     font-size: 12px;
 }
