@@ -1977,14 +1977,30 @@ blockquote cite {
 --------------------------------------------------------------*/
 .product-store .product-item {
     position: relative;
-    margin-bottom: 30px;
+    font-size: small;
+    margin: 10px;
+    width: auto;
+    max-width: 16rem;
+    padding: 10px;
+    border:1px solid rgb(201, 201, 201);
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
 }
+.product-store .product-item-atas {
+position: relative;
+margin-bottom: 30px;
+padding: 10px;
+border:1px solid rgb(201, 201, 201);
+border-radius: 10px;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 .product-item img.product-image {
     background: var(--light-color);
     cursor: pointer;
     margin-bottom: 20px;
     width: 100%;
     max-height: 200px;
+}
 }
 .product-item .cart-concern {
     background: var(--light-color);
@@ -2000,10 +2016,31 @@ blockquote cite {
     padding: 20px 30px;
     opacity: 0;
 }
+
+.product-item-atas .cart-concern {
+  background: var(--light-color);
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  z-index: 9;
+  transition: 0.5s ease-out;
+  padding: 20px 30px;
+  opacity: 0;
+}
 .product-item:hover .cart-concern {
-    bottom: 150px;
+    bottom: 200px;
     opacity: 1;
 }
+
+.product-item-atas:hover .cart-concern {
+  bottom: 250px;
+  opacity: 1;
+}
+
 i.icon.icon-arrow-io {
     font-size: 12px;
 }
@@ -2026,7 +2063,7 @@ i.icon.icon-arrow-io {
     margin: 0;
 }
 .product-item .item-price {
-    font-size: 1.4em;
+    font-size: 1.0em;
 }
 .swiper.product-swiper {
     position: relative;
@@ -2119,7 +2156,7 @@ i.icon.icon-arrow-io {
 
 #brand-collection img{
   height: auto;
-  max-height: 60px;
+  max-height: 50px;
 }
 
 .text-ijo{
@@ -2296,6 +2333,7 @@ i.icon.icon-arrow-io {
     color: var(--grey-color);
     font-size: 0.6em;
     padding-right: 10px;
+    
 }
 #flash-sales {
     position: relative;
