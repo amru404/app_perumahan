@@ -105,6 +105,22 @@ CSS STRUCTURE:
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #6995B1; 
+  border: 1px solid transparent;
+  border-radius: 19px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #426a84; 
+}
+
 :root {
     /* widths for rows and containers
      */
@@ -665,6 +681,78 @@ hr {
 /*--------------------------------------------------------------
 /** 2.10 Buttons
 --------------------------------------------------------------*/
+button.button {
+  border-radius: 5px;
+}
+.filter .dropdown{
+  display: inline-block;
+  position: relative;
+}
+
+.contact button{
+  background-image: none;
+  background:#6995B1;
+  text-decoration: none !important;
+  display: inline-block;
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0.75em 1.5em;
+  margin-top: 0px;
+  font-family: var(--body-font);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--light-color);
+  z-index: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.filter button.btn {
+/* box-shadow: inset 2px 2px 2px #ffffff; */
+            /* inset -7px -7px 14px #000000;   */
+  background-image: none;
+  background:#6995B1;
+  text-decoration: none !important;
+  display: inline-block;
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0.75em 1.5em;
+  margin-top: 0px;
+  font-family: var(--body-font);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--light-color);
+  z-index: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 a.btn,
 input[type="button"],
 input[type="submit"],
@@ -672,14 +760,14 @@ input[type="reset"],
 input[type="file"],
 button {
   background-image: none;
-  background: var(--dark-color);
+  background:#6995B1;
   text-decoration: none !important;
   display: inline-block;
   position: relative;
   border: 2px solid transparent;
-  border-radius: 0;
+  border-radius: 8px;
   padding: 0.75em 1.5em;
-  margin-top: 15px;
+  margin-top: 2px;
   font-family: var(--body-font);
   font-size: 15px;
   font-weight: 500;
@@ -700,6 +788,8 @@ button {
   -ms-user-select: none;
   user-select: none;
 }
+
+
 .btn:hover,
 .btn:focus,
 input[type="button"]:focus,
@@ -1975,6 +2065,27 @@ blockquote cite {
 
 /*----- Featured Products Section
 --------------------------------------------------------------*/
+
+.tab-content-list .product-item-list{
+position: relative;
+margin-bottom: 30px;
+margin-left: 0px;
+padding: 10px;
+border:1px solid rgb(201, 201, 201);
+border-radius: 10px;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+.product-item-list img {
+  background: var(--light-color);
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  max-height: 320px;
+  min-height: 320px;
+}
+
+
 .product-store .product-item {
     position: relative;
     font-size: small;
@@ -1994,6 +2105,7 @@ padding: 10px;
 border:1px solid rgb(201, 201, 201);
 border-radius: 10px;
 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 .product-item img.product-image {
     background: var(--light-color);
     cursor: pointer;
@@ -2001,7 +2113,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: 100%;
     max-height: 200px;
 }
-}
+
 .product-item .cart-concern {
     background: var(--light-color);
     width: 80%;
@@ -2065,6 +2177,32 @@ i.icon.icon-arrow-io {
 .product-item .item-price {
     font-size: 1.0em;
 }
+
+.product-list .item-price {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.product-list .product-title a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 500; 
+}
+
+/* .product-list .product-title{
+  white-space: nowrap;overflow: hidden; text-overflow: ellipsis;width: 100%;
+} */
+
+/* .deskripsiSingkat{
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%; 
+} */
+
+
 .swiper.product-swiper {
     position: relative;
     margin-bottom: 30px;
@@ -2152,6 +2290,7 @@ i.icon.icon-arrow-io {
 
 #brand-collection{
   margin-bottom: 100px;
+  margin-top: -50px;
 }
 
 #brand-collection img{
@@ -2299,14 +2438,14 @@ i.icon.icon-arrow-io {
     font-size: 9em;
     color: var(--grey-color);
 }
-#testimonials .testimonial-detail {
+#testimonials .testimonial-list {
     padding-left: 20px;
 }
-#testimonials .testimonial-detail p {
+#testimonials .testimonial-list p {
     font-size: 1.3em;
     color: var(--dark-color);
 }
-.testimonial-detail .author-detail .name {
+.testimonial-list .author-list .name {
     font-weight: 700;
 }
 #testimonials .swiper-arrows {
@@ -2630,11 +2769,11 @@ a.blog-categories:hover{
 
 /** 7.4 Shop List Page
 --------------------------------------------------------------*/
-.shopify-list .product-detail,
+.shopify-list .product-list,
 .shopify-list .action-buttons{
   margin-top: 20px;
 }
-.shopify-list .product-detail p{
+.shopify-list .product-list p{
   margin-top: 10px;
 }
 
